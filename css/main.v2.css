@@ -1,5 +1,4 @@
 /* Orden de capas: define la cascada sin necesidad de !important */
-@layer tokens, base, layout, components, utilities;
 
 @import url("tokens.css") layer(tokens);
 @import url("base.css") layer(base);
