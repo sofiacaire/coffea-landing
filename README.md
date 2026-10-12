@@ -10,7 +10,7 @@ coffea-landing/
 ├── 404.html            # usa rutas absolutas (/css, /assets) para funcionar en cualquier URL
 ├── netlify.toml        # publish = "." + headers de caché y seguridad
 ├── css/
-│   ├── main.css        # @layer + @import de las capas en orden
+│   ├── main.v2.css     # @layer + @import de las capas en orden
 │   ├── tokens.css      # custom properties (colores, tipografía, radios, espacios)
 │   ├── base.css        # reset, tipografía base, :focus-visible, prefers-reduced-motion
 │   ├── layout.css      # .container, franjas, página 404
