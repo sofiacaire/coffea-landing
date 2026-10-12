@@ -1,4 +1,6 @@
 # Coffea — Landing page (HTML + CSS)
+**Sitio publicado:** https://sofia-caire.netlify.app
+**Repositorio:** https://github.com/sofiacaire/coffea-landing
 
 Landing page estática de una sola página para la cafetería ficticia **Coffea**, construida según el PRD del TP 4 (Diseño UX-UI 2026) con HTML5 semántico y CSS3, sin JavaScript, frameworks ni preprocesadores.
 
@@ -34,7 +36,12 @@ coffea-landing/
 ## Levantar en local
 
 No hay build. Desde la raíz del proyecto:
+**Con Live Server (VS Code):**
+1. Abrir la carpeta del proyecto en VS Code (`File → Open Folder`).
+2. Clic derecho sobre `index.html` → **Open with Live Server**.
+3. Se abre `http://127.0.0.1:5500/index.html`.
 
+**Con Python:**
 ```bash
 python3 -m http.server 8000
 # abrir http://localhost:8000
@@ -55,8 +62,8 @@ Como `css/` y `assets/` se sirven con caché `immutable`, al cambiar un archivo 
 
 ## Pendientes y decisiones abiertas
 
-- **Imágenes**: Se encuentran generadas y optimizadas en `assets/img/` en formatos WebP, AVIF y JPG (a 1x y 2x para pantallas de alta densidad), cumpliendo con el límite de peso de página ≤ 1,5 MB.
-- **Íconos**: Se encuentran completos y optimizados en `assets/icons/`, incluyendo variantes para categorías, estrellas amarillas de rating y variantes activas/rellenas (favoritos).
+- **Imágenes**: son las exportadas de Figma, comprimidas y en formatos AVIF/WebP/JPG. Confirmar la licencia de las fotos del template antes de publicar.
+- **Íconos**: son los SVG exportados de Figma.
 - **Responsive**: tablet y mobile son la propuesta de la sección 7 del PRD, a validar con diseño.
 - **Idioma**: el copy está en inglés (`lang="en"`); los textos de accesibilidad están en español como indica el PRD. Confirmar idioma final.
 - **Copy**: los textos de cards, testimonios y links del footer son placeholders. Los typos del diseño original ya están corregidos.
@@ -64,4 +71,4 @@ Como `css/` y `assets/` se sirven con caché `immutable`, al cambiar un archivo 
 - **Open Graph**: `og:image` usa una ruta relativa; cambiarla por URL absoluta cuando se conozca el dominio.
 - **Fuentes**: se cargan desde Google Fonts; evaluar autohospedar en `assets/fonts/` (woff2).
 - **Flechas del carrusel**: son anclas a `#coffee-5` / `#coffee-1` (y `#dessert-…`); sin JS no paginan por bloques.
-- **Validación**: pasar W3C HTML/CSS, Lighthouse y pruebas cross-browser antes de cerrar la Fase 5.
+- **Validación**: HTML y CSS validados en el W3C con 0 errores (`index.html` y `404.html` por subida de archivo, y `main.v2.css` por URL). Lighthouse sobre la URL de producción: Mobile 98/100/100/100 y Desktop 99/100/100/100 (Performance, Accessibility, Best Practices, SEO). Pendiente: documentar las pruebas cross-browser.
